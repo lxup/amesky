@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Cursor from '@/components/Cursor'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,9 +56,9 @@ export default function Home() {
         <div className='text-xl'>
           amesky - beat makes heart
         </div>
-        <div className='text-xl'>
+        <Link href={'https://naegativ.com'} className='text-xl'>
           05/05
-        </div>
+        </Link>
       </main>
     </>
   )

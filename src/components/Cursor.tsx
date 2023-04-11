@@ -39,7 +39,7 @@ export default function Cursor() {
 
     return (
         <motion.div
-            className=' fixed top-0 left-0'
+            className=' fixed top-0 left-0 pointer-events-none'
             variants={variants}
             animate={cursorVariant}
         >
