@@ -28,12 +28,12 @@ export default function Cursor() {
         return () => {
             window.removeEventListener('mousemove', mouseMove)
         }
-    }, []);
+    }, [])
 
     const variants = {
         default: {
-            x: mousePosition.x - 25,
-            y: mousePosition.y - 25,
+            x: mousePosition.x,
+            y: mousePosition.y,
         }
     }
 
