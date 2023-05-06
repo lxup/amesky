@@ -46,7 +46,7 @@ export default function Home() {
       {/* SALUT */}
       <Head>
         <title>amesky</title>        
-        <meta name="description" content="artiste indé" />
+        <meta name="description" content="BEAT MAKES HEART - 26/05 🏃" />
         <meta name="keywords" content="amesky, rap, album" />
         <meta name="author" content="amesky" />
         <meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible" />
