@@ -1,0 +1,56 @@
+.listenButtonContainer {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.listenButton {
+    font-family: 'HelveticaNeue';
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    background-color: #f89bba;
+    border-radius: 999999px;
+    padding: 5px 10px;
+    transition-duration: 300ms;
+}
+
+.listenButton:hover {
+    background-color: #b6778c;
+    color: black;
+}
+
+.coverContainer {
+    /* background-image: url('../images/amesky_bmh_cover.png'); */
+}
+
+.titleContainer {
+    /* display: flex;
+    flex-direction: column;
+    padding: 0 6rem;
+    overflow: hidden;
+    min-height: 100vh; */
+}
+
+.mainTitle {
+    padding: 0 6rem;
+    margin-top: -140px;
+    position: absolute;
+    text-align: center;
+    font-family: 'HelveticaNeue';
+    font-size: 170px;
+    font-weight: 400;
+    color: #f89bba;
+}
+
+.dateTitle {
+    text-align: right;
+    font-family: 'HelveticaNeue';
+    font-size: 400px;
+    font-weight: 400;
+    color: #f89bba;
+}

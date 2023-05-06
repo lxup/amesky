@@ -4,6 +4,10 @@ import Head from 'next/head'
 import Cursor from '@/components/Cursor'
 import Footer from '@/components/Footer'
 
+// STYLES
+import styles from '../styles/Home.module.css';
+import Link from 'next/link'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -50,17 +54,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Cursor/>
+      {/* <Cursor/> */}
 
-      <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden">
-        <div className='text-xl'>
-          amesky - beat makes heart
+      {/* <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden"> */}
+      <main className={styles.container}>
+        <div className={styles.listenButtonContainer}>
+          <Link href='https://open.spotify.com/artist/4MbXz8Kvr9wizslkKT4wvJ' target='_blank' className={styles.listenButton}>
+            ÉCOUTER
+          </Link>
         </div>
-        <div className='text-xl'>
-          05/05
+        <div className={styles.coverContainer}>
+          <Image src={'/amesky_bmh_cover.png'} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
         </div>
-        <Footer/>
+        <div className={styles.titleContainer}>
+          <div className={styles.mainTitle}>
+            BEAT MAKES HEART
+          </div>
+        </div>
+        <Image src={'/amesky_bmh_tracklist.png'} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
       </main>
+
+      {/* <Footer/> */}
     </>
   )
 }
