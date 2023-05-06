@@ -8,6 +8,10 @@ import Footer from '@/components/Footer'
 import styles from '../styles/Home.module.css';
 import Link from 'next/link'
 
+// IMAGES
+import bmhCover from '../images/amesky_bmh_cover.webp'
+import bmhTracklist from '../images/amesky_bmh_tracklist.webp'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -64,14 +68,14 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.coverContainer}>
-          <Image src={'/amesky_bmh_cover.png'} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
+          <Image src={bmhCover} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
         </div>
         <div className={styles.titleContainer}>
           <div className={styles.mainTitle}>
             BEAT MAKES HEART
           </div>
         </div>
-        <Image src={'/amesky_bmh_tracklist.png'} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
+        <Image src={bmhTracklist} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
       </main>
 
       {/* <Footer/> */}
