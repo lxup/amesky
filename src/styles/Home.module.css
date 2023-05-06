@@ -1,4 +1,5 @@
 .listenButtonContainer {
+    pointer-events: none;
     z-index: 999;
     position: fixed;
     display: flex;
@@ -9,6 +10,7 @@
 }
 
 .listenButton {
+    pointer-events: all;
     font-family: 'HelveticaNeue';
     font-size: 20px;
     font-weight: 400;
