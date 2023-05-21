@@ -9,8 +9,8 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link'
 
 // IMAGES
-import bmhCover from '../images/amesky_bmh_cover.webp'
-import bmhTracklist from '../images/amesky_bmh_tracklist.webp'
+import bmhCover from '../images/amesky_bmh_cover_3000x3000.webp'
+import bmhTracklist from '../images/amesky_bmh_tracklist_3000x3000.webp'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,7 +50,7 @@ export default function Home() {
       {/* SALUT */}
       <Head>
         <title>amesky</title>        
-        <meta name="description" content="BEAT MAKES HEART - 26/05 🏃" />
+        <meta name="description" content="BEAT MAKES HEART - 02/06 🏃" />
         <meta name="keywords" content="amesky, rap, album" />
         <meta name="author" content="amesky" />
         <meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible" />
@@ -70,11 +70,11 @@ export default function Home() {
         <div className={styles.coverContainer}>
           <Image src={bmhCover} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
         </div>
-        <div className={styles.titleContainer}>
+        {/* <div className={styles.titleContainer}>
           <div className={styles.mainTitle}>
             BEAT MAKES HEART
           </div>
-        </div>
+        </div> */}
         <Image src={bmhTracklist} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
       </main>
 
