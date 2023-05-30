@@ -11,10 +11,25 @@ import Link from 'next/link'
 // IMAGES
 import bmhCover from '../images/amesky_bmh_cover_3000x3000.webp'
 import bmhTracklist from '../images/amesky_bmh_tracklist_3000x3000.webp'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [showMusicLink, setShowMusicLink] = useState(false);
+  // DATE
+  const currentDate = new Date();
+  // RELEASE DATE
+  const releaseDate= new Date('2023-06-02T00:00:00')
+
+  useEffect(() => {
+    if (currentDate >= releaseDate) {
+      setShowMusicLink(true);
+    }
+  })
+
+  console.log(currentDate, "yoooooooo")
   
   return (
     <>
@@ -60,25 +75,23 @@ export default function Home() {
 
       {/* <Cursor/> */}
 
-      {/* <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden"> */}
       <main className={styles.container}>
         <div className={styles.listenButtonContainer}>
-          <Link href='https://open.spotify.com/artist/4MbXz8Kvr9wizslkKT4wvJ' target='_blank' className={styles.listenButton}>
-            ÉCOUTER
-          </Link>
+          {showMusicLink ? (
+            <Link href='https://open.spotify.com/artist/4MbXz8Kvr9wizslkKT4wvJ' target='_blank' className={styles.listenButton}>
+              ÉCOUTER
+            </Link>
+          ) : (
+            <Link href='https://distrokid.com/hyperfollow/amesky/beat-makes-heart' target='_blank' className={styles.listenButton}>
+              PRESAVE
+            </Link>
+          )}
         </div>
-        <div className={styles.coverContainer}>
-          <Image src={bmhCover} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
-        </div>
-        {/* <div className={styles.titleContainer}>
-          <div className={styles.mainTitle}>
-            BEAT MAKES HEART
-          </div>
-        </div> */}
+        <Image src={bmhCover} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
         <Image src={bmhTracklist} alt='Cover Beat Makes Heart' width={10000} height={10000}/>
       </main>
 
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 }
