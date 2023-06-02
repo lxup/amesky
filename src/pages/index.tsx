@@ -78,7 +78,10 @@ export default function Home() {
       <main className={styles.container}>
         <div className={styles.listenButtonContainer}>
           {showMusicLink ? (
-            <Link href='https://open.spotify.com/artist/4MbXz8Kvr9wizslkKT4wvJ' target='_blank' className={styles.listenButton}>
+            // <Link href='https://open.spotify.com/artist/4MbXz8Kvr9wizslkKT4wvJ' target='_blank' className={styles.listenButton}>
+            //   ÉCOUTER
+            // </Link>
+            <Link href='https://amesky.streamlink.to/beat-makes-heart' target='_blank' className={styles.listenButton}>
               ÉCOUTER
             </Link>
           ) : (
